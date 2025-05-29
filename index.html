@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BHARGAV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Top Rotating Black Bar -->
+    <div class="top-bar">
+        <div class="scrolling-text">
+            <div class="text-container">
+                <div class="text-group">
+                    <span>DROP 001 COLLECTION AVAILABLE NOW 🔥</span>
+                    <span>LOVED BY OVER 200,000+ CUSTOMERS ♥️</span>
+                    <span>FREE SHIPPING ON ORDERS ABOVE ₹1999 🚛</span>
+                    <span>20% OFF ON FIRST ORDER 🤑</span>
+                    <span>SHIPS WITHIN 24-48 HOURS 💨</span>
+                    <span>WORLDWIDE SHIPPING 🌎</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+
+
+        <div class="logo">BHARGAV</div>
+        <ul class="nav-links">
+            <li><a href="/new-arrivals">NEW ARRIVALS</a></li>
+            <li><a href="/tops">TOPS</a></li>
+            <li><a href="/bottoms">BOTTOMS</a></li>
+            <li><a href="/clearance">CLEARANCE</a></li>
+            <li><a href="/track-order">TRACK MY ORDER</a></li>
+        </ul>
+        <!-- cart, user, profile, search. -->
+        <div class="button-container">
+            <a href="/" class="button" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"
+                    stroke-width="0" fill="currentColor" class="icon">
+                    <path
+                        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                    </path>
+                </svg>
+            </a>
+            <a href="/search" class="button" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24"
+                    stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round"
+                        stroke-linecap="round"></path>
+                </svg>
+            </a>
+            <a href="/account" class="button" aria-label="Account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0"
+                    fill="currentColor" stroke="currentColor" class="icon">
+                    <path
+                        d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="/cart" class="button" aria-label="Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round"
+                    stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"
+                    class="icon">
+                    <circle r="1" cy="21" cx="9"></circle>
+                    <circle r="1" cy="21" cx="20"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sub Nav -->
+    <div class="subnav">
+        <div class="view-options">
+            <button class="view-btn grid-view active" data-view="grid" aria-label="Grid view">
+                <svg class="view-icon" width="20" height="20" viewBox="0 0 20 20">
+                    <!-- 5-line grid icon -->
+                    <rect x="1" y="1" width="18" height="3" rx="0.5" />
+                    <rect x="1" y="6" width="18" height="3" rx="0.5" />
+                    <rect x="1" y="11" width="18" height="3" rx="0.5" />
+                    <rect x="1" y="16" width="18" height="3" rx="0.5" />
+                </svg>
+            </button>
+            <button class="view-btn list-view" data-view="list" aria-label="List view">
+                <svg class="view-icon" width="20" height="20" viewBox="0 0 20 20">
+                    <!-- 3-line list icon -->
+                    <rect x="1" y="3" width="18" height="2" rx="0.5" />
+                    <rect x="1" y="9" width="18" height="2" rx="0.5" />
+                    <rect x="1" y="15" width="18" height="2" rx="0.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="product-count"><span id="product-counter"></span> PRODUCTS</div>
+
+        <div class="sort-by-container">
+            <button class="sort-by-button">
+                SORT BY <span class="arrow">▼</span>
+            </button>
+            <ul class="sort-dropdown">
+                <li><button class="sort-option">Price: Low to High</button></li>
+                <li><button class="sort-option">Price: High to Low</button></li>
+                <li><button class="sort-option">Newest Arrivals</button></li>
+                <li><button class="sort-option">Best Sellers</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="global-divider"></div>
+
+    <!-- Product Grid -->
+    <div id="product-container">
+        <div class="product-grid grid view layout" id="page-1">
+            <!-- Existing 10 clothing items go here -->
+            <!-- Replace product-card divs with this -->
+            <div class="product-card" data-product-id="1" onclick="goToProduct(this)">
+                <div class="discount-tag">SAVE 59%</div>
+                <img src="https://genrage.com/cdn/shop/files/14_1.png?v=1740113446&width=1000" alt="Product 1"
+                    loading="lazy" />
+            </div>
+            <!-- <div class="product-card" onclick="window.location.href='product.html?id=1'">
+                <div class="discount-tag">SAVE 59%</div>
+                <img src="https://genrage.com/cdn/shop/files/14_1.png?v=1740113446&width=1000" alt="Product 1"
+                    loading="lazy" />
+            </div> -->
+            <div class="product-card">
+                <div class="discount-tag">SAVE 47%</div>
+                <img src="https://genrage.com/cdn/shop/files/21_5.png?v=1738481058&width=1000" alt="Product 2"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <div class="discount-tag">SAVE 44%</div>
+                <img src="https://genrage.com/cdn/shop/files/66_da001437-1b28-46f5-b2c4-7b01bd4fb797.png?v=1745842392&width=1000"
+                    alt="Product 3" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <div class="discount-tag">SAVE 55%</div>
+                <img src="https://genrage.com/cdn/shop/files/76.png?v=1745847406&width=1000" alt="Product 4"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <div class="discount-tag">SAVE 59%</div>
+                <img src="https://genrage.com/cdn/shop/files/13_3.png?v=1737608158&width=1000" alt="Product 5"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/103.png?v=1746443457&width=1000" alt="Product 6"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/1_6_ce40602e-6146-433f-8575-d0626b64cdf7.png?v=1734410735&width=1000"
+                    alt="Product 7" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 42%</span>
+                <img src="https://genrage.com/cdn/shop/files/32_ba089e89-650a-4649-8a6d-7d0a5f73ef3a.png?v=1743050683&width=1000"
+                    alt="Product 8" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 33%</span>
+                <img src="https://genrage.com/cdn/shop/files/DENIM_b924b9c1-8b81-4c82-bd24-43f4577d68f0.png?v=1734410543&width=1000"
+                    alt="Product 9" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 38%</span>
+                <img src="https://genrage.com/cdn/shop/files/83.png?v=1747046415&width=1000" alt="Product 10"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/78.png?v=1746427015&width=1000" alt="Product 11"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/101.png?v=1746177329&width=1000" alt="Product 12"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 42%</span>
+                <img src="https://genrage.com/cdn/shop/files/7_3.png?v=1734410494&width=1000" alt="Product 13"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 33%</span>
+                <img src="https://genrage.com/cdn/shop/files/71_136f0465-791e-4b4c-b73b-8ade6f5943ba.png?v=1745485123&width=1000"
+                    alt="Product 14" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 38%</span>
+                <img src="https://genrage.com/cdn/shop/files/58_1.png?v=1735064028&width=1000" alt="Product 15"
+                    loading="lazy" />
+            </div>
+        </div>
+
+        <div class="product-grid grid-view-layout" id="page-2" style="display: none;">
+            <!-- Add 5 or more new clothing items here -->
+            <div class="product-card">
+                <span class="discount-tag">SAVE 45%</span>
+                <img src="https://genrage.com/cdn/shop/files/54.png?v=1745844289&width=1000" alt="Product 16"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 52%</span>
+                <img src="https://genrage.com/cdn/shop/files/18_5.png?v=1738481418&width=1000" alt="Product 17"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 37%</span>
+                <img src="https://genrage.com/cdn/shop/files/45.png?v=1734410963&width=1000" alt="Product 18"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 60%</span>
+                <img src="https://genrage.com/cdn/shop/files/91.png?v=1745852962&width=1000" alt="Product 19"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 41%</span>
+                <img src="https://genrage.com/cdn/shop/files/67.png?v=1746425502&width=1000" alt="Product 20"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 35%</span>
+                <img src="https://genrage.com/cdn/shop/files/72_53f73480-8433-4148-85d7-09682e19f373.png?v=1744986751&width=1000"
+                    alt="New Product 21" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/narc_back3d.png?v=1734410397&width=1000"
+                    alt="New Product 22" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/57.png?v=1744370410&width=1000" alt="New Product 23"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 45%</span>
+                <img src="https://genrage.com/cdn/shop/files/54.png?v=1734410990&width=1000" alt="New Product 24"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 38%</span>
+                <img src="https://genrage.com/cdn/shop/files/grunge_front_d1af036a-7962-40d0-8805-e11ecbb1c8e6.png?v=1734410331&width=1000"
+                    alt="New Product 25" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 42%</span>
+                <img src="https://genrage.com/cdn/shop/files/13_1a25234c-b4a4-42b4-92f9-4eb855688716.png?v=1739876550&width=1000"
+                    alt="New Product 26" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 37%</span>
+                <img src="https://genrage.com/cdn/shop/files/kotsu_f.png?v=1734410456&width=1000" alt="New Product 27"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/cyprus_front_c31b506e-a361-4d57-a434-f37dc57da39b.png?v=1734410561&width=1000"
+                    alt="New Product 28" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 35%</span>
+                <img src="https://genrage.com/cdn/shop/files/74.png?v=1735064392&width=1000" alt="New Product 29"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/23f.png?v=1747395212&width=1000" alt="New Product 30"
+                    loading="lazy" />
+            </div>
+        </div>
+        <div class="product-grid grid-view-layout" id="page-3" style="display: none;">
+            <!-- add items for page 3 here -->
+            <div class="product-card">
+                <span class="discount-tag">SAVE 30%</span>
+                <img src="https://genrage.com/cdn/shop/files/10_0b83d07a-6bda-4a31-9270-d2dcb42ac79d.png?v=1739876434&width=1000"
+                    alt="Product 31" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 49%</span>
+                <img src="https://genrage.com/cdn/shop/files/11_c39d8515-5256-4b1a-8a67-5e48a95aaa15.png?v=1739876395&width=1000"
+                    alt="Product 32" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 36%</span>
+                <img src="https://genrage.com/cdn/shop/files/2_9.png?v=1734410863&width=1000" alt="Product 33"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 58%</span>
+                <img src="https://genrage.com/cdn/shop/files/38_1.png?v=1743699725&width=1000" alt="Product 34"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 43%</span>
+                <img src="https://genrage.com/cdn/shop/files/1_9.png?v=1742290653&width=1000" alt="Product 35"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 35%</span>
+                <img src="https://genrage.com/cdn/shop/files/1_PNG_1.png?v=1734410676&width=1000" alt="New Product 36"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/PNG_3_de76c6d7-4162-4b0e-8dbe-afc3a734d96e.png?v=1734410538&width=1000"
+                    alt="New Product 37" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/1_8.png?v=1734410566&width=1000" alt="New Product 38"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 45%</span>
+                <img src="https://genrage.com/cdn/shop/files/ghoul_1.png?v=1734410505&width=1000" alt="New Product 39"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 38%</span>
+                <img src="https://genrage.com/cdn/shop/files/58_1.png?v=1735064028&width=1000" alt="New Product 40"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 42%</span>
+                <img src="https://genrage.com/cdn/shop/files/4_5.png?v=1734410568&width=1000" alt="New Product 41"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 37%</span>
+                <img src="https://genrage.com/cdn/shop/files/13_e047e99c-a356-4b37-a7d2-1b7a9208c388.png?v=1734410551&width=1000"
+                    alt="New Product 42" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 40%</span>
+                <img src="https://genrage.com/cdn/shop/files/11_2bff4ee0-44c1-4ae3-a63f-31d9ad04dab7.png?v=1734410803&width=1000"
+                    alt="New Product 43" loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 35%</span>
+                <img src="https://genrage.com/cdn/shop/files/49.png?v=1743257956&width=1000" alt="New Product 44"
+                    loading="lazy" />
+            </div>
+            <div class="product-card">
+                <span class="discount-tag">SAVE 50%</span>
+                <img src="https://genrage.com/cdn/shop/files/68.png?v=1735063218&width=1000" alt="New Product 45"
+                    loading="lazy" />
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn prev">&lt;</button>
+            <button class="page-btn active" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
+            <button class="page-btn next">&gt;</button>
+        </div>
+
+    </div>
+
+
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="feature">
+                <img src="https://img.icons8.com/ios-filled/50/delivery.png" alt="Delivery" />
+                <p>FREE DELIVERY ANYWHERE IN INDIA</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios-filled/50/refresh.png" alt="Exchange" />
+                <p>EASY EXCHANGES</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios-filled/50/help.png" alt="Support" />
+                <p>ROBUST CUSTOMER SUPPORT</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios-filled/50/happy.png" alt="Customers" />
+                <p>2LAKH+ TRUSTED CUSTOMERS</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="left-links">
+                <h4>FOOTER</h4>
+                <ul>
+                    <li><a href="exchanges.html">Exchange Policy</a></li>
+                    <li><a href="reviews.html">Customer Reviews</a></li>
+                    <li><a href="Return-Policy.html">Return Policy</a></li>
+                    <li><a href="Liscences-Agreements.html">Liscences & Agreements</a></li>
+                    <li><a href="About-Us.html">About us</a></li>
+                    <li><a href="Terms-of-Service.html">Terms of Service</a></li>
+                    <li><a href="Subscribe.html">Subscribe</a></li>
+                    <li><a href="Follow-Us.html">Follow Us</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="right-text">
+                <p>PROUDLY HOMEGROWN IN INDIA</p>
+                <p>&copy; BHARGAV</p>
+            </div>
+        </div>
+
+        <div class="copyright-line">
+            &copy; 2025 - BHARGAV
+        </div>
+    </footer>
+    <script src="script.js">
+
+        function goToProduct(element) {
+            const productId = element.getAttribute('data-product-id');
+            window.location.href = `product.html?id=${productId}`;
+        }
+    </script>
+
+</body>
+
+</html>

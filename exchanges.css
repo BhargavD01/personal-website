@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3d3d3;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background: #000;
+    color: white;
+    height: 42px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scrolling-text {
+    height: 100%;
+    position: relative;
+}
+
+.text-container {
+    position: absolute;
+    width: 100%;
+    animation: scroll 18s linear infinite;
+    will-change: transform;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.text-group span {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.text-group span:hover {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* For modern browsers */
+@supports (font-variation-settings: normal) {
+    .top-bar {
+        font-family: 'Inter var', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+}
+
+.text-container span {
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.rotating-text {
+    position: absolute;
+    animation: slideText 9s infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+.rotating-text span {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+@keyframes slideText {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    33% {
+        top: -40px;
+    }
+
+    66% {
+        top: -80px;
+    }
+}
+
+/* Navbar */
+
+@media (max-width: 768px) {
+    .subnav {
+        top: 50px;
+        /* Smaller gap on mobile */
+        padding: 10px 20px;
+        /* Reduce padding */
+    }
+}
+
+.navbar {
+
+    /* position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #d3d3d3; use only if you want the main nav to also be sticky and behave like the subnav */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.subnav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    /* Semi-bold */
+    letter-spacing: 1px;
+
+}
+
+/* Convert buttons to links while preserving styles */
+.button-container a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove underline */
+    outline: 0 !important;
+    border: 0 !important;
+}
+
+/* Hover effects (same as before) */
+.button-container a.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-container a.button {
+    position: relative;
+}
+
+.button-container a.button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.button-container a.button:hover::after {
+    width: 70%;
+}
+
+/* Keep icon styles */
+.button-container a.button .icon {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+    margin-left: 70px;
+    /* Match footer text color */
+}
+
+.nav-links li {
+    list-style: none;
+    position: relative;
+    padding: 5px 0;
+    /* Add spacing around links */
+}
+
+.nav-links li:hover {
+    letter-spacing: 1px;
+    /* Same hover effect as footer */
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    color: inherit;
+    /* Keep existing text color */
+    text-decoration: none;
+    /* Remove default underline */
+    font: inherit;
+    /* Inherit font styles from parent */
+}
+
+.nav-links li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    /* Underline color */
+    transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+    /* Animated underline */
+}
+
+.nav-icons span {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+/* Underline effect on hover */
+.button-container .button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    /* Thin underline */
+    bottom: -4px;
+    /* Adjust distance from icon */
+    left: 50%;
+    /* Center the underline */
+    transform: translateX(-50%);
+    /* Perfect centering */
+    background-color: #333;
+    /* Match footer underline color */
+    transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.button-container .button:hover::after {
+    width: 70%;
+    /* Slightly shorter than full width for subtlety */
+}
+
+.top-bar {
+    background: #111;
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text {
+    height: 100%;
+    position: relative;
+}
+
+.text-container {
+    position: absolute;
+    width: 100%;
+    animation: scroll linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.text-container.loaded {
+    opacity: 1;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-group span {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.button-container {
+    display: flex;
+    background-color: rgba(225, 225, 225, 0.1);
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.global-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Very subtle black */
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* If you want it to appear below specific sections */
+.navbar+.global-divider {
+    margin-top: -1px;
+    /* Adjust as needed */
+}
+
+/* Content Section Styles */
+.content-section {
+    background-color: #d3d3d3;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.content-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.features-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-block {
+    flex: 1 1 180px;
+    max-width: 220px;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-block img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.site-footer {
+    background-color: #d1d1d1;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 30px;
+}
+
+.footer-top,
+.footer-top * {
+
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #333;
+    /* or uppercase, based on footer */
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-top .feature {
+    margin: 10px;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.footer-top img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-top p {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    letter-spacing: 3px;
+    font-family: 'Inter', sans-serif;
+    /* If you want a different font */
+    font-weight: 500;
+}
+
+.footer-links h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    /* If you want a different font */
+    font-weight: 500;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+    line-height: 1.6;
+
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    letter-spacing: 1px;
+    /* Interactive spacing increase on hover */
+}
+
+footer {
+    background: linear-gradient(to top, rgb(104, 130, 155) 0%, #d3d3d3 100%);
+    border-top: 1px solid #d3d3d3;
+}
+
+.right-text {
+    letter-spacing: 3.5px;
+    line-height: 2;
+    /* Increased line height */
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    /* If you want a different font */
+    font-weight: 500;
+}
+
+.right-text p {
+    margin: 5px 0;
+    /* More space between paragraphs */
+    font-weight: 500;
+    /* Slightly bolder */
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+
+.social-icons a {
+    color: #333;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: translateY(-3px);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+}
+
+.social-icons a:nth-child(1):hover {
+    background: #E1306C;
+}
+
+/* Instagram */
+.social-icons a:nth-child(2):hover {
+    background: #E60023;
+}
+
+/* Pinterest */
+.social-icons a:nth-child(3):hover {
+    background: #FF0000;
+}
+
+/* YouTube */
+.social-icons a:nth-child(4):hover {
+    background: #0077B5;
+}
+
+/* LinkedIn */
+.social-icons a:nth-child(5):hover {
+    background: #25D366;
+}
+
+/* WhatsApp */
+
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: translateY(-3px);
+    filter: none;
+}
+
+
+.copyright-line {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    /* black screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader {
+    border: 4px solid #fff;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    transform: scale(1.1);
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+/* Before .content-loaded is added: keep everything invisible and shifted down */
+body:not(.content-loaded) .main-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* After .content-loaded is added: fade and slide into place */
+body.content-loaded .main-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .navbar,
+    .subnav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
